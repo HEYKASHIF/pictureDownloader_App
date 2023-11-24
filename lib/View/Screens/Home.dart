@@ -46,12 +46,17 @@ class HomeScreen extends StatelessWidget {
                 itemBuilder: ((context, index) => Container(
                     height: 500,
                     width: 50,
-                    color: Colors.red,
-                    child: Image.network(
-                        height: 500,
-                        width: 50,
-                        fit: BoxFit.cover,
-                        "https://images.pexels.com/photos/19010668/pexels-photo-19010668/free-photo-of-book-rowan-and-tea-on-picnic-blanket.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"))),
+                    decoration: BoxDecoration(
+                        color: Colors.red,
+                        borderRadius: BorderRadius.circular(20)),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Image.network(
+                          height: 500,
+                          width: 50,
+                          fit: BoxFit.cover,
+                          "https://images.pexels.com/photos/19010668/pexels-photo-19010668/free-photo-of-book-rowan-and-tea-on-picnic-blanket.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"),
+                    ))),
               ),
             )
           ],
