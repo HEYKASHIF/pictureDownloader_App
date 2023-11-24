@@ -15,38 +15,40 @@ class HomeScreen extends StatelessWidget {
         elevation: 0.0,
         title: CustomAppBarWidget(),
       ),
-      body: Column(
-        children: [
-          Container(
-              padding: EdgeInsets.symmetric(horizontal: 15),
-              child: SearchBarScreen()),
-          Container(
-            padding: EdgeInsets.symmetric(vertical: 20),
-            child: SizedBox(
-              height: 100,
-              width: MediaQuery.of(context).size.width,
-              child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: 30,
-                  itemBuilder: ((context, index) => CatBlockWidget())),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+                padding: EdgeInsets.symmetric(horizontal: 15),
+                child: SearchBarScreen()),
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 20),
+              child: SizedBox(
+                height: 100,
+                width: MediaQuery.of(context).size.width,
+                child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 30,
+                    itemBuilder: ((context, index) => CatBlockWidget())),
+              ),
             ),
-          ),
-          SizedBox(
-            height: 400,
-            child: GridView.builder(
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 10,
-                  mainAxisSpacing: 10,
-                ),
-                itemCount: 16,
-                itemBuilder: ((context, index) => Container(
-                      height: 500,
-                      width: 50,
-                      color: Colors.red,
-                    ))),
-          )
-        ],
+            SizedBox(
+              height: MediaQuery.of(context).size.height,
+              child: GridView.builder(
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 10,
+                  ),
+                  itemCount: 16,
+                  itemBuilder: ((context, index) => Container(
+                        height: 500,
+                        width: 50,
+                        color: Colors.red,
+                      ))),
+            )
+          ],
+        ),
       ),
     );
   }
