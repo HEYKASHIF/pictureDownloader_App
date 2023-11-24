@@ -36,6 +36,7 @@ class HomeScreen extends StatelessWidget {
               margin: EdgeInsets.symmetric(horizontal: 7),
               height: MediaQuery.of(context).size.height,
               child: GridView.builder(
+                physics: BouncingScrollPhysics(),
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 10,
