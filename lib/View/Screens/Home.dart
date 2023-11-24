@@ -33,20 +33,26 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             Container(
+              margin: EdgeInsets.symmetric(horizontal: 7),
               height: MediaQuery.of(context).size.height,
               child: GridView.builder(
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    crossAxisSpacing: 10,
-                    mainAxisExtent: 410,
-                    mainAxisSpacing: 10,
-                  ),
-                  itemCount: 16,
-                  itemBuilder: ((context, index) => Container(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 10,
+                  mainAxisExtent: 410,
+                  mainAxisSpacing: 10,
+                ),
+                itemCount: 16,
+                itemBuilder: ((context, index) => Container(
+                    height: 500,
+                    width: 50,
+                    color: Colors.red,
+                    child: Image.network(
                         height: 500,
                         width: 50,
-                        color: Colors.red,
-                      ))),
+                        fit: BoxFit.cover,
+                        "https://images.pexels.com/photos/19010668/pexels-photo-19010668/free-photo-of-book-rowan-and-tea-on-picnic-blanket.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"))),
+              ),
             )
           ],
         ),
