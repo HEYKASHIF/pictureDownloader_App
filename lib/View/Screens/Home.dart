@@ -20,13 +20,16 @@ class HomeScreen extends StatelessWidget {
           Container(
               padding: EdgeInsets.symmetric(horizontal: 15),
               child: SearchBarScreen()),
-          SizedBox(
-            height: 100,
-            width: MediaQuery.of(context).size.width,
-            child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: 30,
-                itemBuilder: ((context, index) => CatBlockWidget())),
+          Container(
+            padding: EdgeInsets.symmetric(vertical: 20),
+            child: SizedBox(
+              height: 100,
+              width: MediaQuery.of(context).size.width,
+              child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 30,
+                  itemBuilder: ((context, index) => CatBlockWidget())),
+            ),
           )
         ],
       ),
