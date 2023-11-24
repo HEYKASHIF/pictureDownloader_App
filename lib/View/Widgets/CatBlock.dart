@@ -24,6 +24,17 @@ class CatBlockWidget extends StatelessWidget {
               color: Colors.black26,
               borderRadius: BorderRadius.circular(15),
             ),
+          ),
+          Positioned(
+            left: 30,
+            top: 25,
+            child: Text(
+              "House",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 30),
+            ),
           )
         ],
       ),
