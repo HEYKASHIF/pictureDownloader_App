@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             Container(
                 padding: EdgeInsets.symmetric(horizontal: 15),
-                child: SearchBarScreen()),
+                child: SearchBarWidget()),
             Container(
               padding: EdgeInsets.symmetric(vertical: 20),
               child: SizedBox(

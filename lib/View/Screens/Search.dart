@@ -20,18 +20,7 @@ class SearchScreen extends StatelessWidget {
           children: [
             Container(
                 padding: EdgeInsets.symmetric(horizontal: 15),
-                child: SearchBarScreen()),
-            Container(
-              padding: EdgeInsets.symmetric(vertical: 20),
-              child: SizedBox(
-                height: 100,
-                width: MediaQuery.of(context).size.width,
-                child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: 30,
-                    itemBuilder: ((context, index) => CatBlockWidget())),
-              ),
-            ),
+                child: SearchBarWidget()),
             Container(
               margin: EdgeInsets.symmetric(horizontal: 7),
               height: MediaQuery.of(context).size.height,
