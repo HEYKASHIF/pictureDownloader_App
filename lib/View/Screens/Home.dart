@@ -32,12 +32,13 @@ class HomeScreen extends StatelessWidget {
                     itemBuilder: ((context, index) => CatBlockWidget())),
               ),
             ),
-            SizedBox(
+            Container(
               height: MediaQuery.of(context).size.height,
               child: GridView.builder(
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     crossAxisSpacing: 10,
+                    mainAxisExtent: 410,
                     mainAxisSpacing: 10,
                   ),
                   itemCount: 16,
