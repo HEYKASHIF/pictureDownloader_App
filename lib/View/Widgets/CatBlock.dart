@@ -6,8 +6,25 @@ class CatBlockWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Image.network(
-          "https://images.pexels.com/photos/18435633/pexels-photo-18435633/free-photo-of-black-and-white-photo-of-young-woman-posing-in-elegant-blazer-headscarf-and-fedora-hat.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"),
+      child: Stack(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(15),
+            child: Image.network(
+                height: 100,
+                width: 150,
+                "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"),
+          ),
+          Container(
+            height: 100,
+            width: 150,
+            decoration: BoxDecoration(
+              color: Colors.black26,
+              borderRadius: BorderRadius.circular(15),
+            ),
+          )
+        ],
+      ),
     );
   }
 }

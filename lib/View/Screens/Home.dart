@@ -17,7 +17,9 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          SearchBarScreen(),
+          Container(
+              padding: EdgeInsets.symmetric(horizontal: 15),
+              child: SearchBarScreen()),
           SizedBox(
             height: 100,
             width: MediaQuery.of(context).size.width,
