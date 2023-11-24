@@ -14,6 +14,7 @@ class CatBlockWidget extends StatelessWidget {
             child: Image.network(
                 height: 100,
                 width: 150,
+                // fit: BoxFit.cover,
                 "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"),
           ),
           Container(
