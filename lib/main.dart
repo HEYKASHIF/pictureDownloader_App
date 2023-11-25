@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pictute_downloader/View/Screens/Category.dart';
 import 'package:pictute_downloader/View/Screens/Home.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Picture Downloader',
-      home: HomeScreen(),
+      home: CategoryScreen(),
     );
   }
 }

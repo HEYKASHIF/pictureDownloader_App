@@ -18,19 +18,44 @@ class CategoryScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-                padding: EdgeInsets.symmetric(horizontal: 15),
-                child: SearchBarWidget()),
-            Container(
-              padding: EdgeInsets.symmetric(vertical: 20),
-              child: SizedBox(
-                height: 100,
-                width: MediaQuery.of(context).size.width,
-                child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: 30,
-                    itemBuilder: ((context, index) => CatBlockWidget())),
-              ),
+            Stack(
+              children: [
+                Image.network(
+                    height: 150,
+                    fit: BoxFit.cover,
+                    width: MediaQuery.of(context).size.width,
+                    "https://images.pexels.com/photos/10736687/pexels-photo-10736687.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"),
+                Container(
+                  height: 150,
+                  width: MediaQuery.of(context).size.width,
+                  color: Colors.black38,
+                ),
+                Positioned(
+                  left: 130,
+                  top: 30,
+                  child: Column(
+                    children: [
+                      Text(
+                        "Category",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 30),
+                      ),
+                      Text(
+                        "Mountains",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 30),
+                      )
+                    ],
+                  ),
+                )
+              ],
+            ),
+            SizedBox(
+              height: 10,
             ),
             Container(
               margin: EdgeInsets.symmetric(horizontal: 7),
