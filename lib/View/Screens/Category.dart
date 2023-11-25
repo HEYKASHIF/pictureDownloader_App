@@ -38,9 +38,9 @@ class CategoryScreen extends StatelessWidget {
                       Text(
                         "Category",
                         style: TextStyle(
-                            color: Colors.black,
+                            color: Colors.white,
                             fontWeight: FontWeight.bold,
-                            fontSize: 30),
+                            fontSize: 20),
                       ),
                       Text(
                         "Mountains",
