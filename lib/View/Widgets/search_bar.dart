@@ -1,4 +1,3 @@
-import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 
@@ -8,15 +7,15 @@ class SearchBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 20),
       decoration: BoxDecoration(
-        color: Color.fromARGB(255, 224, 151, 151),
+        color: const Color.fromARGB(255, 224, 151, 151),
         border: Border.all(color: Colors.black),
         borderRadius: BorderRadius.circular(50),
       ),
       child: Row(
         children: [
-          Expanded(
+          const Expanded(
             child: TextField(
               decoration: InputDecoration(
                 hintText: "    Search Picture",
@@ -31,10 +30,11 @@ class SearchBarWidget extends StatelessWidget {
           ),
           InkWell(
               onTap: () {
+                // ignore: avoid_print
                 print("Searching...");
               },
-              child: Icon(Icons.search)),
-          SizedBox(
+              child: const Icon(Icons.search)),
+          const SizedBox(
             width: 10,
           )
         ],

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pictute_downloader/View/Widgets/CatBlock.dart';
-import 'package:pictute_downloader/View/Widgets/CustomAppBar.dart';
-import 'package:pictute_downloader/View/Widgets/SearchBar.dart';
+import 'package:pictute_downloader/View/Widgets/custom_appbar.dart';
+import 'package:pictute_downloader/View/Widgets/search_bar.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
@@ -13,20 +12,20 @@ class SearchScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0.0,
-        title: CustomAppBarWidget(),
+        title: const CustomAppBarWidget(),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
             Container(
-                padding: EdgeInsets.symmetric(horizontal: 15),
-                child: SearchBarWidget()),
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                child: const SearchBarWidget()),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 7),
+              margin: const EdgeInsets.symmetric(horizontal: 7),
               height: MediaQuery.of(context).size.height,
               child: GridView.builder(
-                physics: BouncingScrollPhysics(),
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                physics: const BouncingScrollPhysics(),
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 10,
                   mainAxisExtent: 410,
@@ -53,6 +52,6 @@ class SearchScreen extends StatelessWidget {
         ),
       ),
     );
-    ;
+    
   }
 }

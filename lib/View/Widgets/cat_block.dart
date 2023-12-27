@@ -6,7 +6,7 @@ class CatBlockWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 5),
+      margin: const EdgeInsets.symmetric(horizontal: 5),
       child: Stack(
         children: [
           ClipRRect(
@@ -25,7 +25,7 @@ class CatBlockWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(15),
             ),
           ),
-          Positioned(
+          const Positioned(
             left: 30,
             top: 25,
             child: Text(

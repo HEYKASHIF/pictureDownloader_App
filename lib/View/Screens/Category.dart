@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pictute_downloader/View/Widgets/CatBlock.dart';
-import 'package:pictute_downloader/View/Widgets/CustomAppBar.dart';
-import 'package:pictute_downloader/View/Widgets/SearchBar.dart';
+import 'package:pictute_downloader/View/Widgets/custom_appbar.dart';
 
 class CategoryScreen extends StatelessWidget {
   const CategoryScreen({super.key});
@@ -13,7 +11,7 @@ class CategoryScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0.0,
-        title: CustomAppBarWidget(),
+        title: const CustomAppBarWidget(),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -30,7 +28,7 @@ class CategoryScreen extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   color: Colors.black38,
                 ),
-                Positioned(
+                const Positioned(
                   left: 130,
                   top: 30,
                   child: Column(
@@ -54,15 +52,15 @@ class CategoryScreen extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 7),
+              margin: const EdgeInsets.symmetric(horizontal: 7),
               height: MediaQuery.of(context).size.height,
               child: GridView.builder(
-                physics: BouncingScrollPhysics(),
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                physics: const BouncingScrollPhysics(),
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 10,
                   mainAxisExtent: 410,
@@ -89,6 +87,6 @@ class CategoryScreen extends StatelessWidget {
         ),
       ),
     );
-    ;
+    
   }
 }

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pictute_downloader/View/Screens/Category.dart';
+import 'package:pictute_downloader/View/Screens/category.dart';
 
 void main() {
-  runApp(App());
+  runApp(const App());
 }
 
 class App extends StatelessWidget {
