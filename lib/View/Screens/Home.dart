@@ -1,10 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:pictute_downloader/Controller/api_operations.dart';
 import 'package:pictute_downloader/View/Widgets/cat_block.dart';
 import 'package:pictute_downloader/View/Widgets/custom_appbar.dart';
 import 'package:pictute_downloader/View/Widgets/search_bar.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  @override
+  void initState() {
+    super.initState();
+    ApiOperations.getTrendingPictures();
+  }
 
   @override
   Widget build(BuildContext context) {
